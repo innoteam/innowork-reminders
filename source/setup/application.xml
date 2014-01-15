@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<application>
+
+	<definition>
+		<idname>innowork-reminders</idname>
+		<release>
+			<version>1.0</version>
+			<date>2014/01/15</date>
+			<changesfile>CHANGES</changesfile>
+		</release>
+		<description>Innowork reminders</description>
+		<category>intranet</category>
+		<iconfile></iconfile>
+		<dependencies>
+			<dependency>innowork-core[3.2]</dependency>
+			<suggestion>innowork-projects</suggestion>
+		</dependencies>
+		<options>
+			<!-- <option></option> -->
+		</options>
+		<legal>
+			<author>
+				<name>Innoteam Srl</name>
+				<email>info@innoteam.it</email>
+				<web>http://www.innoteam.it/</web>
+			</author>
+			<copyright>Copyright (c) 2014 Innoteam Srl</copyright>
+			<license>Commercial</license>
+			<licensefile>LICENSE</licensefile>
+		</legal>
+		<support>
+			<supportemail>helpdesk@innoteam.it</supportemail>
+			<bugsemail>helpdesk@innoteam.it</bugsemail>
+			<maintainer>
+				<name>Alex Pagnoni</name>
+				<email>alex.pagnoni@innoteam.it</email>
+			</maintainer>
+		</support>
+	</definition>
+
+	<components>
+
+		<catalog name="innowork-reminders" />
+
+		<domainpanel name="innoworkreminders" file="innoworkreminders.php"
+			themeicon="todo" themeicontype="apps"
+			catalog="innowork-reminders::reminder_misc" category="1summary" />
+
+		<domaintable name="innowork_reminders"
+			file="innowork_reminders.xml" />
+
+		<innoworkitemtype name="reminder"
+			catalog="innowork-reminders::reminder_misc"
+			classfile="innowork/reminders/InnoworkReminder.php" classname="InnoworkReminder" icon="todo"
+			icontype="apps" domainpanel="innoworkreminders"
+			miniicon="view_detailed" summaryname="reminder-name" showmode="list" />
+
+		<class name="innowork/reminders/InnoworkReminder.php" />
+
+	</components>
+</application>

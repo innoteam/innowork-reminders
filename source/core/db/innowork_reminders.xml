@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<database>
+
+    <table name="innowork_reminders">
+        <field	name="id"	type="integer"	notnull="1"/>
+        <field	name="ownerid"	type="integer"	notnull="1"/>
+        <field name="reminder"           type="text"/>
+        <field  name="projectid"    type="integer"/>
+        <field	name="reminderdate"	type="timestamp"/>
+        <field	name="done"	type="boolean"/>
+        <field name="trashed" type="boolean"/>
+        <field name="description" type="text"/>
+        <field name="priority" type="integer"/>
+        <field name="spenttime" type="integer"/>
+
+        <key	field="id"	type="unique"/>
+    </table>
+
+    <sequence	name="innowork_reminders_id_seq"/>
+
+</database>
